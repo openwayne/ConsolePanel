@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "defaultTitle": "Demo",
+    "titleBarColor": "#49a9ee",
+    "backgroundColor":"#ffffff"
+  }
+}

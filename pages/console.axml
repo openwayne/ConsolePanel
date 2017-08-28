@@ -1,0 +1,24 @@
+<template name="ConsolePanel">
+    <view class="console-container">
+        <view a:if="{{hideConsolePanel == true}}" class="console-show-btn" onTap="consoleShowPanel">
+            <view class="console-show-btn-content">Console</view>
+        </view>
+        <view class="console-panel" a:if="{{hideConsolePanel == false}}">
+            <view class="console-btn-panel">
+                <button onTap="consoleClearLog" class="console-btn">清空</button>
+                <button onTap="consoleShowLogTime" class="console-btn">时间</button>
+                <view onTap="consoleClosePanel" class="console-panel-close"> X </button>
+            </view>
+
+            <view class="console-panel" style="height: inherit;">
+                <view a:for="{{data}}">
+                    <view class="console-log-item {{item.type == 'info' && 'console-log-info'}} {{item.type == 'warn' && 'console-log-warn'}} {{item.type == 'error' && 'console-log-error'}}" >
+                        <view a:if="showTime">{{item.time}}</view>
+                        <view> =>({{item.type}}) {{item.msg}}</view>
+                    </view>
+                    <view class="console-line"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

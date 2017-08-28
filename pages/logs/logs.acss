@@ -1,0 +1,15 @@
+/* page element styles */
+page {
+  background-color: #49a9ee;
+  color: #fff;
+}
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
